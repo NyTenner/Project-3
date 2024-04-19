@@ -1,5 +1,6 @@
 /**
  * A collection of simple math utilities.
+ * @author Samuel A. Rebelsky??
  */
 public class MathUtils {
   /**

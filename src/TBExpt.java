@@ -61,43 +61,25 @@ public class TBExpt {
     thing = right.right(box3, 15);
     TBUtils.print(pen, thing);
 
-    // TextBlock cent;
-    // cent = Centered.middle(box3, 18);    
-    // TBUtils.print(pen, cent);
+    System.out.println("HorizontallyFlipped works for nonempty blocks of two or more lines.");
+    HorizontallyFlipped hor = new HorizontallyFlipped();
+    thing = hor.HFlipped(box3);
+    TBUtils.print(pen, thing);
 
-    // TextBlock r;
-    // r = RightJustified.right(block1, 18);    
-    // TBUtils.print(pen, r);
+    System.out.println("VerticallyFlipped works for nonempty blocks of two or more lines.");
+    VerticallyFlipped vert = new VerticallyFlipped();
+    thing = vert.VFlip(box3);
+    TBUtils.print(pen, thing);
 
-    // TextBlock r;
-    // r = HorizontallyFlipped.HFlip(box3);    
-    // TBUtils.print(pen, r);
+    System.out.println("HorizontallyFlipped and VerticallyFlipped works with empty blocks (new TextLine(\"\")).");
+    hor = new HorizontallyFlipped();
+    thing = hor.HFlipped(new TextLine(""));
+    TBUtils.print(pen, thing);
 
-    // TextBlock r;
-    // r = VerticallyFlipped.VFlip(box3);    
-    // TBUtils.print(pen, r);
-
-    // TextBlock r;
-    // r = FlipBoth._switch_(box3);    
-    // TBUtils.print(pen, r);
-
-
-    // HComposition funk1 = new HComposition(box1, block2);
-    // HComposition funk2 = new HComposition(block2, box1);
-    // TBUtils.print(pen, funk1);
-    // TBUtils.print(pen, funk2);
-
-
-    // TextBlock tb1 =  HorizontallyFlipped.HFlipped( HorizontallyFlipped.HFlipped( HorizontallyFlipped.HFlipped( HorizontallyFlipped.HFlipped(new TextLine("a")))));
-    // TextBlock tb2 =  HorizontallyFlipped.HFlipped( HorizontallyFlipped.HFlipped(new TextLine("a")));
-    // TextBlock tb3 =  HorizontallyFlipped.HFlipped( HorizontallyFlipped.HFlipped( HorizontallyFlipped.HFlipped( HorizontallyFlipped.HFlipped(new TextLine("a")))));
-
-    //System.out.println(TBUtils.eq(tb1, tb3));
-    // System.out.println(TBUtils.eqv(tb1, tb2));
-      // TextBlock tb3 = new TextLine("a");
-      // TextBlock tb4 = new HFlip(new HFlip(new HFlip(new HFlip(new TextLine("a")))));
+    vert = new VerticallyFlipped();
+    thing = vert.VFlip(new TextLine(""));
+    TBUtils.print(pen, thing);
     
-
     // Clean up after ourselves.
     pen.close();
   } // main(String[])
